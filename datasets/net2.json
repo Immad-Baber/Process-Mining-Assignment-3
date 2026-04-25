@@ -1,0 +1,527 @@
+{
+  "transitions": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "NOISE_01",
+    "NOISE_02",
+    "NOISE_03",
+    "NOISE_ERR",
+    "NOISE_SYS"
+  ],
+  "places": [
+    "iL",
+    "oL",
+    "p_A_D_to_G",
+    "p_A_E_F_to_G",
+    "p_A_E_F_to_H",
+    "p_A_NOISE_02_to_B",
+    "p_A_to_B_G",
+    "p_A_to_B_H",
+    "p_A_to_C_G",
+    "p_A_to_C_H",
+    "p_A_to_G_I",
+    "p_A_to_H_I",
+    "p_B_NOISE_01_to_D",
+    "p_C_E_to_NOISE_01",
+    "p_C_H_to_NOISE_02",
+    "p_C_to_D_NOISE_02",
+    "p_C_to_NOISE_01_NOISE_02",
+    "p_D_to_E_F",
+    "p_G_to_H",
+    "p_NOISE_01_NOISE_03_to_D",
+    "p_NOISE_01_to_A_D",
+    "p_NOISE_02_to_B_NOISE_SYS"
+  ],
+  "source_place": "iL",
+  "sink_place": "oL",
+  "start_transitions": [
+    "A",
+    "NOISE_01"
+  ],
+  "end_transitions": [
+    "H",
+    "NOISE_01",
+    "NOISE_02",
+    "NOISE_SYS"
+  ],
+  "yl_pairs": [
+    {
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B",
+        "G"
+      ],
+      "place": "p_A_to_B_G"
+    },
+    {
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B",
+        "H"
+      ],
+      "place": "p_A_to_B_H"
+    },
+    {
+      "A": [
+        "A"
+      ],
+      "B": [
+        "C",
+        "G"
+      ],
+      "place": "p_A_to_C_G"
+    },
+    {
+      "A": [
+        "A"
+      ],
+      "B": [
+        "C",
+        "H"
+      ],
+      "place": "p_A_to_C_H"
+    },
+    {
+      "A": [
+        "A"
+      ],
+      "B": [
+        "G",
+        "I"
+      ],
+      "place": "p_A_to_G_I"
+    },
+    {
+      "A": [
+        "A"
+      ],
+      "B": [
+        "H",
+        "I"
+      ],
+      "place": "p_A_to_H_I"
+    },
+    {
+      "A": [
+        "C"
+      ],
+      "B": [
+        "D",
+        "NOISE_02"
+      ],
+      "place": "p_C_to_D_NOISE_02"
+    },
+    {
+      "A": [
+        "C"
+      ],
+      "B": [
+        "NOISE_01",
+        "NOISE_02"
+      ],
+      "place": "p_C_to_NOISE_01_NOISE_02"
+    },
+    {
+      "A": [
+        "D"
+      ],
+      "B": [
+        "E",
+        "F"
+      ],
+      "place": "p_D_to_E_F"
+    },
+    {
+      "A": [
+        "G"
+      ],
+      "B": [
+        "H"
+      ],
+      "place": "p_G_to_H"
+    },
+    {
+      "A": [
+        "NOISE_01"
+      ],
+      "B": [
+        "A",
+        "D"
+      ],
+      "place": "p_NOISE_01_to_A_D"
+    },
+    {
+      "A": [
+        "NOISE_02"
+      ],
+      "B": [
+        "B",
+        "NOISE_SYS"
+      ],
+      "place": "p_NOISE_02_to_B_NOISE_SYS"
+    },
+    {
+      "A": [
+        "A",
+        "D"
+      ],
+      "B": [
+        "G"
+      ],
+      "place": "p_A_D_to_G"
+    },
+    {
+      "A": [
+        "A",
+        "NOISE_02"
+      ],
+      "B": [
+        "B"
+      ],
+      "place": "p_A_NOISE_02_to_B"
+    },
+    {
+      "A": [
+        "B",
+        "NOISE_01"
+      ],
+      "B": [
+        "D"
+      ],
+      "place": "p_B_NOISE_01_to_D"
+    },
+    {
+      "A": [
+        "C",
+        "E"
+      ],
+      "B": [
+        "NOISE_01"
+      ],
+      "place": "p_C_E_to_NOISE_01"
+    },
+    {
+      "A": [
+        "C",
+        "H"
+      ],
+      "B": [
+        "NOISE_02"
+      ],
+      "place": "p_C_H_to_NOISE_02"
+    },
+    {
+      "A": [
+        "NOISE_01",
+        "NOISE_03"
+      ],
+      "B": [
+        "D"
+      ],
+      "place": "p_NOISE_01_NOISE_03_to_D"
+    },
+    {
+      "A": [
+        "A",
+        "E",
+        "F"
+      ],
+      "B": [
+        "G"
+      ],
+      "place": "p_A_E_F_to_G"
+    },
+    {
+      "A": [
+        "A",
+        "E",
+        "F"
+      ],
+      "B": [
+        "H"
+      ],
+      "place": "p_A_E_F_to_H"
+    }
+  ],
+  "flow_arcs": [
+    {
+      "from": "A",
+      "to": "p_A_D_to_G"
+    },
+    {
+      "from": "A",
+      "to": "p_A_E_F_to_G"
+    },
+    {
+      "from": "A",
+      "to": "p_A_E_F_to_H"
+    },
+    {
+      "from": "A",
+      "to": "p_A_NOISE_02_to_B"
+    },
+    {
+      "from": "A",
+      "to": "p_A_to_B_G"
+    },
+    {
+      "from": "A",
+      "to": "p_A_to_B_H"
+    },
+    {
+      "from": "A",
+      "to": "p_A_to_C_G"
+    },
+    {
+      "from": "A",
+      "to": "p_A_to_C_H"
+    },
+    {
+      "from": "A",
+      "to": "p_A_to_G_I"
+    },
+    {
+      "from": "A",
+      "to": "p_A_to_H_I"
+    },
+    {
+      "from": "B",
+      "to": "p_B_NOISE_01_to_D"
+    },
+    {
+      "from": "C",
+      "to": "p_C_E_to_NOISE_01"
+    },
+    {
+      "from": "C",
+      "to": "p_C_H_to_NOISE_02"
+    },
+    {
+      "from": "C",
+      "to": "p_C_to_D_NOISE_02"
+    },
+    {
+      "from": "C",
+      "to": "p_C_to_NOISE_01_NOISE_02"
+    },
+    {
+      "from": "D",
+      "to": "p_A_D_to_G"
+    },
+    {
+      "from": "D",
+      "to": "p_D_to_E_F"
+    },
+    {
+      "from": "E",
+      "to": "p_A_E_F_to_G"
+    },
+    {
+      "from": "E",
+      "to": "p_A_E_F_to_H"
+    },
+    {
+      "from": "E",
+      "to": "p_C_E_to_NOISE_01"
+    },
+    {
+      "from": "F",
+      "to": "p_A_E_F_to_G"
+    },
+    {
+      "from": "F",
+      "to": "p_A_E_F_to_H"
+    },
+    {
+      "from": "G",
+      "to": "p_G_to_H"
+    },
+    {
+      "from": "H",
+      "to": "oL"
+    },
+    {
+      "from": "H",
+      "to": "p_C_H_to_NOISE_02"
+    },
+    {
+      "from": "NOISE_01",
+      "to": "oL"
+    },
+    {
+      "from": "NOISE_01",
+      "to": "p_B_NOISE_01_to_D"
+    },
+    {
+      "from": "NOISE_01",
+      "to": "p_NOISE_01_NOISE_03_to_D"
+    },
+    {
+      "from": "NOISE_01",
+      "to": "p_NOISE_01_to_A_D"
+    },
+    {
+      "from": "NOISE_02",
+      "to": "oL"
+    },
+    {
+      "from": "NOISE_02",
+      "to": "p_A_NOISE_02_to_B"
+    },
+    {
+      "from": "NOISE_02",
+      "to": "p_NOISE_02_to_B_NOISE_SYS"
+    },
+    {
+      "from": "NOISE_03",
+      "to": "p_NOISE_01_NOISE_03_to_D"
+    },
+    {
+      "from": "NOISE_SYS",
+      "to": "oL"
+    },
+    {
+      "from": "iL",
+      "to": "A"
+    },
+    {
+      "from": "iL",
+      "to": "NOISE_01"
+    },
+    {
+      "from": "p_A_D_to_G",
+      "to": "G"
+    },
+    {
+      "from": "p_A_E_F_to_G",
+      "to": "G"
+    },
+    {
+      "from": "p_A_E_F_to_H",
+      "to": "H"
+    },
+    {
+      "from": "p_A_NOISE_02_to_B",
+      "to": "B"
+    },
+    {
+      "from": "p_A_to_B_G",
+      "to": "B"
+    },
+    {
+      "from": "p_A_to_B_G",
+      "to": "G"
+    },
+    {
+      "from": "p_A_to_B_H",
+      "to": "B"
+    },
+    {
+      "from": "p_A_to_B_H",
+      "to": "H"
+    },
+    {
+      "from": "p_A_to_C_G",
+      "to": "C"
+    },
+    {
+      "from": "p_A_to_C_G",
+      "to": "G"
+    },
+    {
+      "from": "p_A_to_C_H",
+      "to": "C"
+    },
+    {
+      "from": "p_A_to_C_H",
+      "to": "H"
+    },
+    {
+      "from": "p_A_to_G_I",
+      "to": "G"
+    },
+    {
+      "from": "p_A_to_G_I",
+      "to": "I"
+    },
+    {
+      "from": "p_A_to_H_I",
+      "to": "H"
+    },
+    {
+      "from": "p_A_to_H_I",
+      "to": "I"
+    },
+    {
+      "from": "p_B_NOISE_01_to_D",
+      "to": "D"
+    },
+    {
+      "from": "p_C_E_to_NOISE_01",
+      "to": "NOISE_01"
+    },
+    {
+      "from": "p_C_H_to_NOISE_02",
+      "to": "NOISE_02"
+    },
+    {
+      "from": "p_C_to_D_NOISE_02",
+      "to": "D"
+    },
+    {
+      "from": "p_C_to_D_NOISE_02",
+      "to": "NOISE_02"
+    },
+    {
+      "from": "p_C_to_NOISE_01_NOISE_02",
+      "to": "NOISE_01"
+    },
+    {
+      "from": "p_C_to_NOISE_01_NOISE_02",
+      "to": "NOISE_02"
+    },
+    {
+      "from": "p_D_to_E_F",
+      "to": "E"
+    },
+    {
+      "from": "p_D_to_E_F",
+      "to": "F"
+    },
+    {
+      "from": "p_G_to_H",
+      "to": "H"
+    },
+    {
+      "from": "p_NOISE_01_NOISE_03_to_D",
+      "to": "D"
+    },
+    {
+      "from": "p_NOISE_01_to_A_D",
+      "to": "A"
+    },
+    {
+      "from": "p_NOISE_01_to_A_D",
+      "to": "D"
+    },
+    {
+      "from": "p_NOISE_02_to_B_NOISE_SYS",
+      "to": "B"
+    },
+    {
+      "from": "p_NOISE_02_to_B_NOISE_SYS",
+      "to": "NOISE_SYS"
+    }
+  ]
+}

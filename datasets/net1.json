@@ -1,0 +1,227 @@
+{
+  "transitions": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I"
+  ],
+  "places": [
+    "iL",
+    "oL",
+    "p_A_to_B",
+    "p_A_to_C",
+    "p_B_to_D",
+    "p_B_to_I",
+    "p_C_to_D",
+    "p_C_to_I",
+    "p_D_to_E_F",
+    "p_E_F_to_G",
+    "p_G_to_H",
+    "p_I_to_D"
+  ],
+  "source_place": "iL",
+  "sink_place": "oL",
+  "start_transitions": [
+    "A"
+  ],
+  "end_transitions": [
+    "H"
+  ],
+  "yl_pairs": [
+    {
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "place": "p_A_to_B"
+    },
+    {
+      "A": [
+        "A"
+      ],
+      "B": [
+        "C"
+      ],
+      "place": "p_A_to_C"
+    },
+    {
+      "A": [
+        "B"
+      ],
+      "B": [
+        "D"
+      ],
+      "place": "p_B_to_D"
+    },
+    {
+      "A": [
+        "B"
+      ],
+      "B": [
+        "I"
+      ],
+      "place": "p_B_to_I"
+    },
+    {
+      "A": [
+        "C"
+      ],
+      "B": [
+        "D"
+      ],
+      "place": "p_C_to_D"
+    },
+    {
+      "A": [
+        "C"
+      ],
+      "B": [
+        "I"
+      ],
+      "place": "p_C_to_I"
+    },
+    {
+      "A": [
+        "D"
+      ],
+      "B": [
+        "E",
+        "F"
+      ],
+      "place": "p_D_to_E_F"
+    },
+    {
+      "A": [
+        "G"
+      ],
+      "B": [
+        "H"
+      ],
+      "place": "p_G_to_H"
+    },
+    {
+      "A": [
+        "I"
+      ],
+      "B": [
+        "D"
+      ],
+      "place": "p_I_to_D"
+    },
+    {
+      "A": [
+        "E",
+        "F"
+      ],
+      "B": [
+        "G"
+      ],
+      "place": "p_E_F_to_G"
+    }
+  ],
+  "flow_arcs": [
+    {
+      "from": "A",
+      "to": "p_A_to_B"
+    },
+    {
+      "from": "A",
+      "to": "p_A_to_C"
+    },
+    {
+      "from": "B",
+      "to": "p_B_to_D"
+    },
+    {
+      "from": "B",
+      "to": "p_B_to_I"
+    },
+    {
+      "from": "C",
+      "to": "p_C_to_D"
+    },
+    {
+      "from": "C",
+      "to": "p_C_to_I"
+    },
+    {
+      "from": "D",
+      "to": "p_D_to_E_F"
+    },
+    {
+      "from": "E",
+      "to": "p_E_F_to_G"
+    },
+    {
+      "from": "F",
+      "to": "p_E_F_to_G"
+    },
+    {
+      "from": "G",
+      "to": "p_G_to_H"
+    },
+    {
+      "from": "H",
+      "to": "oL"
+    },
+    {
+      "from": "I",
+      "to": "p_I_to_D"
+    },
+    {
+      "from": "iL",
+      "to": "A"
+    },
+    {
+      "from": "p_A_to_B",
+      "to": "B"
+    },
+    {
+      "from": "p_A_to_C",
+      "to": "C"
+    },
+    {
+      "from": "p_B_to_D",
+      "to": "D"
+    },
+    {
+      "from": "p_B_to_I",
+      "to": "I"
+    },
+    {
+      "from": "p_C_to_D",
+      "to": "D"
+    },
+    {
+      "from": "p_C_to_I",
+      "to": "I"
+    },
+    {
+      "from": "p_D_to_E_F",
+      "to": "E"
+    },
+    {
+      "from": "p_D_to_E_F",
+      "to": "F"
+    },
+    {
+      "from": "p_E_F_to_G",
+      "to": "G"
+    },
+    {
+      "from": "p_G_to_H",
+      "to": "H"
+    },
+    {
+      "from": "p_I_to_D",
+      "to": "D"
+    }
+  ]
+}
